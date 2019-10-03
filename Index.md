@@ -1,6 +1,0 @@
-<html>
-<body>
-<h1>Vishal's Page</h1>
-<p>Under Construction.</p>
-</body>
-</html>
