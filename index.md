@@ -1,8 +1,6 @@
 <html>
 <body>
 <h1>Vishal's Page</h1>
-<p>Website Under Construction.
-Learning Visual Studio Code and Javascript to code all stuff.
-Testing this now</p>
+<p>Website Under Construction. Please come back soon for some super awesome content</p>
 </body>
 </html>
