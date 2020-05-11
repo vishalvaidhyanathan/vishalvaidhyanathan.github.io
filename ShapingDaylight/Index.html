@@ -30,6 +30,8 @@
                         <input type="range" min="1" max="3" value="1" class="slider" id="furniture">
                     </div>
                 </div>
+                <br>
+                <button class="w3-btn w3-teal" id = "submit"> Submit </button>
             </div>
             
         <script>
@@ -42,10 +44,15 @@
             var di = document.getElementById("div_i");
             var fi = document.getElementById("furn_i");
             var img = document.getElementById("image");
+            var but = document.getElementById("submit")
 
             setImage();
             setText();
-
+            
+            but.onclick = function() {
+                but.innerText = " Done, Thank you! "
+            }
+            
             even.oninput = function() {
                 setImage();
                 setText();
