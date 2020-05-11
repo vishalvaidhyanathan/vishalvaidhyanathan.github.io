@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <head>
+        <title> Qualitative Evaluation Survey </title>
+    </head>
+    <body>
+        <!-- Page content -->
+        <div class="w3-content w3-display-container limit-width">
+            <br>
+            <div class="w3-center">
+                <img src="https://cdn.glitch.com/b675156d-b9d9-4fec-940f-c7d20b6bceaa%2F1-1-1-1.jpg" id="image" alt="render-0" style="width:100%">
+                <div class="w3-row-padding w3-padding-16">
+                    <div class="w3-quarter w3-margin-bottom">
+                        <h4 class="w3-padding-16 green-color">Window Size: <span id="type_i" class="w3-tag green-background">Large Window</span></h4>
+                        <input type="range" min="1" max="2" value="1" class="slider" id="type">
+                    </div>
+                    <div class="w3-quarter w3-margin-bottom">
+                        <h4 class=" w3-padding-16 green-color">Facade Type: <span id="div_i" class="w3-tag green-background">Linear Facade</span></h4>
+                        <input type="range" min="1" max="3" value="1" class="slider" id="division">
+                    </div>
+                    <div class="w3-quarter w3-margin-bottom">
+                        <h4 class=" w3-padding-16 green-color">Glazing Color: <span id="even_i" class="w3-tag green-background">Neutral Colour</span></h4>
+                        <input type="range" min="1" max="3" value="1" class="slider" id="evenness">
+                    </div>
+                    <div class="w3-quarter w3-margin-bottom">
+                        <h4 class=" w3-padding-16 green-color">Furniture: <span id="furn_i" class="w3-tag green-background">Layout 1</span></h4>
+                        <input type="range" min="1" max="3" value="1" class="slider" id="furniture">
+                    </div>
+                </div>
+            </div>
+            
+        <script>
+            var even = document.getElementById("evenness");
+            var type = document.getElementById("type");
+            var div = document.getElementById("division");
+            var furn = document.getElementById("furniture");
+            var ei = document.getElementById("even_i");
+            var ti = document.getElementById("type_i");
+            var di = document.getElementById("div_i");
+            var fi = document.getElementById("furn_i");
+            var img = document.getElementById("image");
+
+            setImage();
+            setText();
+
+            even.oninput = function() {
+                setImage();
+                setText();
+            }
+            type.oninput = function() {
+                setImage();
+                setText();
+            }
+            div.oninput = function() {
+                setImage();
+                setText();
+            }
+            furn.oninput = function() {
+                setImage();
+                setText();
+            }
+
+            function setImage() {
+                var ev = even.value;
+                var tv = type.value;
+                var dv = div.value;
+                var fv = furn.value;
+                img.src = "https://cdn.glitch.com/b675156d-b9d9-4fec-940f-c7d20b6bceaa%2F" + tv + "-" + dv + "-" + ev + "-" + fv + ".jpg";
+                img.alt = "Rendered Image Failed to load, damn it vishal"
+            }
+
+            function setText() {
+                var ev = even.value;
+                var tv = type.value;
+                var dv = div.value;
+                var fv = furn.value;
+                var es;
+                var ts;
+                var ds;
+                var fs;
+                switch (ev) {
+                    case "1": 
+                        es = "Neutral";
+                        break;
+                    case "2":
+                        es = "Blue";
+                        break;
+                    case "3":
+                        es = "Orange"
+                }
+                switch (tv) {
+                    case "1": 
+                        ts = "Large";
+                        break;
+                    case "2":
+                        ts = "Small";
+                        break;
+                }
+                switch (dv) {
+                    case "1": 
+                        ds = "Linear";
+                        break;
+                    case "2":
+                        ds = "Tapered";
+                        break;
+                    case "3":
+                        ds = "Complex";
+                        break;
+                }
+                switch (fv) {
+                    case "1": 
+                        fs = "Layout 1";
+                        break;
+                    case "2":
+                        fs = "Layout 2";
+                        break;
+                    case "3":
+                        fs = "Layout 3";
+                        break;
+                }
+                ei.innerText = es;
+                ti.innerText = ts;
+                di.innerText = ds;
+                fi.innerText = fs;
+            }
+        </script>
+    </body>
+</html>
+<style>
+
+</style>
+<style>
+    body, html {
+    height: 100%;
+}
+
+.green-color {
+    color:#000000;
+}
+
+.green-background {
+    background:#FFFFFF;
+    color: #008080
+}
+
+.limit-width {
+    max-width: 1200px;
+} 
+</style>
+<style>
+    .slidecontainer {
+    width: 100%;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 80%;
+    height: 10px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 15px;
+    background: #000000;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 15px;
+    height: 25px;
+    background: #000000;
+    cursor: pointer;
+  }
+</style>
