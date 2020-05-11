@@ -11,7 +11,9 @@
         <div class="w3-content w3-display-container limit-width">
             <br>
             <div class="w3-center">
-                <img src="images/1-1-1-1.jpg" id="image" alt="render-0" style="width:100%">
+                <iframe src="https://storage.googleapis.com/vrview/2.0/embed?image=images/1-1-1-1.jpg" id="image">
+                </iframe>
+                <!--img src="images/1-1-1-1.jpg" id="image" alt="render-0" style="width:100%"-->
                 <div class="w3-row-padding w3-padding-16">
                     <div class="w3-quarter w3-margin-bottom">
                         <h4 class="w3-padding-16 green-color">Window Size: <span id="type_i" class="w3-tag green-background">Large Window</span></h4>
@@ -79,7 +81,7 @@
                 var tv = type.value;
                 var dv = div.value;
                 var fv = furn.value;
-                img.src = "images/" + tv + "-" + dv + "-" + ev + "-" + fv + ".jpg";
+                img.src = "https://storage.googleapis.com/vrview/2.0/embed?image=images/" + tv + "-" + dv + "-" + ev + "-" + fv + ".jpg";
                 img.alt = "Rendered Image Failed to load, damn it vishal"
             }
 
