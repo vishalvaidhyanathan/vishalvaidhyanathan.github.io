@@ -151,11 +151,24 @@
             setText();
         
             but.onclick = function() {
-                but.innerText = " Done, Thank you! ";
+                but.innerText = " Submitted, Thank you! ";
                 even.disabled = true;
                 type.disabled = true;
                 div.disabled = true;
                 furn.disabled = true;
+
+                //writing to csv
+                var ev = even.value;
+                var tv = type.value;
+                var dv = div.value;
+                var fv = furn.value;
+
+                var fs = require('fs');
+
+                fs.appendFile('response.csv', tv + "," + dv + "," + ev + "," + fv, function (err) {
+                if (err) throw err;
+                console.log('Saved!');
+                });
                 
             }
 
