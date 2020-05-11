@@ -50,6 +50,8 @@
             
             var vrView;
 
+            even.disabled = true;
+
             // All the scenes for the experience
 
             function onLoad() {
@@ -85,7 +87,7 @@
             function onVRViewReady(e) {
             console.log('onVRViewReady');
 
-            // Create the carousel links
+            // Create the slider links
 
             div.addEventListener('input', function(event) {
             var ev = even.value;
