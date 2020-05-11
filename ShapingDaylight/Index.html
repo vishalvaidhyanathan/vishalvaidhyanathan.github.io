@@ -49,7 +49,13 @@
             var but = document.getElementById("submit")
             window.addEventListener('load', onVrViewLoad);
 
-            onVrViewLoad();
+            function onVrViewLoad() {
+            // Selector '#vrview' finds element with id 'vrview'.
+            var vrView = new VRView.Player('#vrview', {
+                image: 'images/1-1-1-1.jpg',
+                is_stereo: false
+                });
+            }
             setImage();
             setText();
 
@@ -63,32 +69,20 @@
             }
 
             even.oninput = function() {
-                onVrViewLoad();
                 setImage();
                 setText();
             }
             type.oninput = function() {
-                onVrViewLoad();
                 setImage();
                 setText();
             }
             div.oninput = function() {
-                onVrViewLoad();
                 setImage();
                 setText();
             }
             furn.oninput = function() {
-                onVrViewLoad();
                 setImage();
                 setText();
-            }
-
-            function onVrViewLoad() {
-            // Selector '#vrview' finds element with id 'vrview'.
-            var vrView = new VRView.Player('#vrview', {
-                image: "images/" + tv + "-" + dv + "-" + ev + "-" + fv + ".jpg",
-                is_stereo: false
-                });
             }
 
             function setImage() {
