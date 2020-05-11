@@ -13,7 +13,7 @@
             <br>
             <div class="w3-center">
                 <div id='vrview'></div>
-                <img src="images/1-1-1-1.jpg" id="image" alt="render-0" style="width:100%">
+                <!--img src="images/1-1-1-1.jpg" id="image" alt="render-0" style="width:100%"-->
                 <div class="w3-row-padding w3-padding-16">
                     <div class="w3-quarter w3-margin-bottom">
                         <h4 class="w3-padding-16 green-color">Window Size: <span id="type_i" class="w3-tag green-background">Large Window</span></h4>
@@ -47,18 +47,103 @@
             var fi = document.getElementById("furn_i");
             var img = document.getElementById("image");
             var but = document.getElementById("submit")
-            window.addEventListener('load', onVrViewLoad);
+            
+            var vrView;
 
-            function onVrViewLoad() {
-            // Selector '#vrview' finds element with id 'vrview'.
-            var vrView = new VRView.Player('#vrview', {
-                image: 'images/1-1-1-1.jpg',
-                is_stereo: false
-                });
+            // All the scenes for the experience
+
+            function onLoad() {
+            vrView = new VRView.Player('#vrview', {
+                width: '100%',
+                height: 700,
+                image: 'https://raw.githubusercontent.com/googlearchive/vrview/master/examples/gallery/blank.png',
+                is_stereo: false,
+                is_autopan_off: true
+            });
+
+            vrView.on('ready', onVRViewReady);
+            vrView.on('modechange', onModeChange);
+            vrView.on('getposition', onGetPosition);
+            vrView.on('error', onVRViewError);
             }
-            setImage();
-            setText();
 
+            function loadScene(name) {
+            console.log('loadScene', name);
+
+            // Set the image
+            vrView.setContent({
+                image: name,
+                is_autopan_off: true
+            });
+
+            }
+
+            function onVRViewReady(e) {
+            console.log('onVRViewReady');
+
+            // Create the carousel links
+
+            div.addEventListener('input', function(event) {
+            var ev = even.value;
+            var tv = type.value;
+            var dv = div.value;
+            var fv = furn.value;
+            //setImage();
+            setText();
+            event.preventDefault();
+            loadScene("images/" + tv + "-" + dv + "-" + ev + "-" + fv + ".jpg");
+            });
+            type.addEventListener('input', function(event) {
+            var ev = even.value;
+            var tv = type.value;
+            var dv = div.value;
+            var fv = furn.value;
+            //setImage();
+            setText();
+            event.preventDefault();
+            loadScene("images/" + tv + "-" + dv + "-" + ev + "-" + fv + ".jpg");
+            });
+            even.addEventListener('input', function(event) {
+            var ev = even.value;
+            var tv = type.value;
+            var dv = div.value;
+            var fv = furn.value;
+            //setImage();
+            setText();
+            event.preventDefault();
+            loadScene("images/" + tv + "-" + dv + "-" + ev + "-" + fv + ".jpg");
+            });
+            furn.addEventListener('input', function(event) {
+            var ev = even.value;
+            var tv = type.value;
+            var dv = div.value;
+            var fv = furn.value;
+            //setImage();
+            setText();
+            event.preventDefault();
+            loadScene("images/" + tv + "-" + dv + "-" + ev + "-" + fv + ".jpg");
+            });
+
+            loadScene("images/1-1-1-1.jpg");
+            }
+
+            function onModeChange(e) {
+            console.log('onModeChange', e.mode);
+            }
+
+            function onVRViewError(e) {
+            console.log('Error! %s', e.message);
+            }
+
+            function onGetPosition(e) {
+                console.log(e)
+            }
+
+            window.addEventListener('load', onLoad);
+
+            //setImage();
+            setText();
+        
             but.onclick = function() {
                 but.innerText = " Done, Thank you! ";
                 even.disabled = true;
@@ -66,23 +151,6 @@
                 div.disabled = true;
                 furn.disabled = true;
                 
-            }
-
-            even.oninput = function() {
-                setImage();
-                setText();
-            }
-            type.oninput = function() {
-                setImage();
-                setText();
-            }
-            div.oninput = function() {
-                setImage();
-                setText();
-            }
-            furn.oninput = function() {
-                setImage();
-                setText();
             }
 
             function setImage() {
@@ -148,6 +216,7 @@
                 di.innerText = ds;
                 fi.innerText = fs;
             }
+
         </script>
     </body>
 </html>
@@ -208,3 +277,18 @@
     cursor: pointer;
   }
 </style>
+
+
+<!--
+<?php
+   $filename = "/home/user/guest/newfile.txt";
+   $file = fopen( $filename, "w" );
+   
+   if( $file == false ) {
+      echo ( "Error in opening new file" );
+      exit();
+   }
+   fwrite( $file, "This is  a simple test\n" );
+   fclose( $file );
+?>
+-->
