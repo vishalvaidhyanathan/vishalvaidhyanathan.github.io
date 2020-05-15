@@ -60,7 +60,7 @@
             var dv = div.value;
             var fv = furn.value;
             vrView = new VRView.Player('#vrview', {
-                image: "images/1-1-1-1.jpg",
+                image: "https://cdn.glitch.com/b675156d-b9d9-4fec-940f-c7d20b6bceaa%2F1-1-1-1.jpg",
                 width: '100%',
                 height: 700,
                 is_stereo: false,
@@ -97,7 +97,7 @@
             //setImage();
             setText();
             event.preventDefault();
-            loadScene("images/" + tv + "-" + dv + "-" + ev + "-" + fv + ".jpg");
+            loadScene("https://cdn.glitch.com/b675156d-b9d9-4fec-940f-c7d20b6bceaa%2F" + tv + "-" + dv + "-" + ev + "-" + fv + ".jpg");
             });
             type.addEventListener('input', function(event) {
             var ev = even.value;
@@ -107,7 +107,7 @@
             //setImage();
             setText();
             event.preventDefault();
-            loadScene("images/" + tv + "-" + dv + "-" + ev + "-" + fv + ".jpg");
+            loadScene("https://cdn.glitch.com/b675156d-b9d9-4fec-940f-c7d20b6bceaa%2F" + tv + "-" + dv + "-" + ev + "-" + fv + ".jpg");
             });
             even.addEventListener('input', function(event) {
             var ev = even.value;
@@ -117,7 +117,7 @@
             //setImage();
             setText();
             event.preventDefault();
-            loadScene("images/" + tv + "-" + dv + "-" + ev + "-" + fv + ".jpg");
+            loadScene("https://cdn.glitch.com/b675156d-b9d9-4fec-940f-c7d20b6bceaa%2F" + tv + "-" + dv + "-" + ev + "-" + fv + ".jpg");
             });
             furn.addEventListener('input', function(event) {
             var ev = even.value;
@@ -127,10 +127,10 @@
             //setImage();
             setText();
             event.preventDefault();
-            loadScene("images/" + tv + "-" + dv + "-" + ev + "-" + fv + ".jpg");
+            loadScene("https://cdn.glitch.com/b675156d-b9d9-4fec-940f-c7d20b6bceaa%2F" + tv + "-" + dv + "-" + ev + "-" + fv + ".jpg");
             });
 
-            loadScene("images/1-1-1-1.jpg");
+            loadScene("https://cdn.glitch.com/b675156d-b9d9-4fec-940f-c7d20b6bceaa%2F1-1-1-1.jpg");
             }
 
             function onModeChange(e) {
@@ -164,7 +164,7 @@
                 var tv = type.value;
                 var dv = div.value;
                 var fv = furn.value;
-                img.src = "images/" + tv + "-" + dv + "-" + ev + "-" + fv + ".jpg";
+                img.src = "https://cdn.glitch.com/b675156d-b9d9-4fec-940f-c7d20b6bceaa%2F" + tv + "-" + dv + "-" + ev + "-" + fv + ".jpg";
                 img.alt = "Rendered Image Failed to load, damn it vishal";
             }
 
