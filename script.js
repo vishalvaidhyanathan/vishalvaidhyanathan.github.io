@@ -38,7 +38,7 @@
 
   Building.prototype.render = function() {
     sketch.fillStyle = sketch.strokeStyle = this.color;
-    sketch.lineWidth = 2;
+    sketch.lineWidth = 0;
     sketch.beginPath();
     sketch.rect(this.x, this.y, this.width, this.height);
     sketch.fill();
@@ -164,7 +164,7 @@
           min: 150 - (i * 35),
           max: 300 - (i * 35)
         },
-        speed: (i) * .001,
+        speed: (i) * .0005,
         color: 'hsl( 200, ' + i + '%, ' + (75 - (i * 12)) + '% )'
       })));
     }
