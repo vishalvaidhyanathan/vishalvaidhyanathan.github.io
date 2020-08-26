@@ -129,8 +129,8 @@
  */
 :root {
   /* Fonts */
-  --font-primary: 'Raleway', sans-serif;
-  --font-secondary: 'Cinzel', serif;
+  --font-primary: 'Roboto', sans-serif;
+  --font-secondary: 'Prata', serif;
   /* Colors */
   --color-dark-1: #111111;
   --color-dark-2: #262626;
