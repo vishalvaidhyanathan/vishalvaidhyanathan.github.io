@@ -129,7 +129,7 @@
  */
 :root {
   /* Fonts */
-  --font-primary: 'Roboto', sans-serif;
+  --font-primary: 'Raleway', sans-serif;
   --font-secondary: 'Cinzel', serif;
   /* Colors */
   --color-dark-1: #111111;
@@ -7630,7 +7630,7 @@ small, .small {
 
 .split-text:not(.js-split-text) .has-drop-cap > div:first-child {
   display: inline-block !important;
-  float: none;
+  float: left;
 }
 
 .split-text:not(.js-split-text) .has-drop-cap > div:first-child:after {
