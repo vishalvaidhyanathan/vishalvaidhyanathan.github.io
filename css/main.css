@@ -130,7 +130,7 @@
 :root {
   /* Fonts */
   --font-primary: 'Roboto', sans-serif;
-  --font-secondary: 'Roboto', serif;
+  --font-secondary: 'Cinzel', serif;
   /* Colors */
   --color-dark-1: #111111;
   --color-dark-2: #262626;
@@ -7630,7 +7630,7 @@ small, .small {
 
 .split-text:not(.js-split-text) .has-drop-cap > div:first-child {
   display: inline-block !important;
-  float: left;
+  float: none;
 }
 
 .split-text:not(.js-split-text) .has-drop-cap > div:first-child:after {

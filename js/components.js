@@ -169,7 +169,7 @@ window.PagePreloader.start();
  */
 if (typeof window.theme === 'undefined') {
 	window.theme = {
-		fonts: ['Roboto', 'Roboto'], // declare your fonts to be loaded here
+		fonts: ['Roboto', 'Cinzel'], // declare your fonts to be loaded here
 		ajax: {
 			enabled: true,
 			preventRules: '' // jQuery selectors of the elements to exclude them from AJAX transitions
