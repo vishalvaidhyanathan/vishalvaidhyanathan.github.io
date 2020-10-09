@@ -540,6 +540,10 @@ a:hover {
   border-radius: 64px;
 }
 
+.mainButton {
+  margin-right: 48px;
+}
+
 @media screen and (min-width: 320px) {
   .button {
     font-size: calc(10 * 1px + (13 - 10) * ((100vw - 320px) / 2240));
