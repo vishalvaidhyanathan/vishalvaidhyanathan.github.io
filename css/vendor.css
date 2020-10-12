@@ -6218,13 +6218,14 @@ a.pswp__share--download:hover {
 */
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-  font-family: "rhye";
+  font-family: "Material Icons";
   font-style: normal;
   font-weight: normal;
   speak: none;
   display: inline-block;
   text-decoration: inherit;
-  width: 1em;
+  width: 2em;
+  margin-top: 0.6em;
   margin-right: .2em;
   text-align: center;
   /* opacity: .8; */
@@ -6237,7 +6238,7 @@ a.pswp__share--download:hover {
   /* remove if not needed */
   margin-left: .2em;
   /* you can be more comfortable with increased icons size */
-  /* font-size: 120%; */
+  font-size: 125%;
   /* Font smoothing. That was taken from TWBS */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -6246,62 +6247,62 @@ a.pswp__share--download:hover {
 }
 
 .icon-click:before {
-  content: '\e802';
+  content: "app_settings_alt";
 }
 
 /* '' */
 .icon-dark-light:before {
-  content: '\e803';
+  content: "bubble_chart";
 }
 
 /* '' */
 .icon-font:before {
-  content: '\e805';
+  content: "psychology";
 }
 
 /* '' */
 .icon-magic-wand:before {
-  content: '\e807';
+  content: "engineering";
 }
 
 /* '' */
 .icon-move:before {
-  content: '\e808';
+  content: 'eco';
 }
 
 /* '' */
 .icon-repeat:before {
-  content: '\e809';
+  content: "blur_linear";
 }
 
 /* '' */
 .icon-responsive:before {
-  content: '\e80a';
+  content: 'domain';
 }
 
 /* '' */
 .icon-text:before {
-  content: '\e80b';
+  content: "3d_rotation";
 }
 
 /* '' */
 .icon-expand:before {
-  content: '\e80c';
+  content: 'mediation';
 }
 
 /* '' */
 .icon-form:before {
-  content: '\e80d';
+  content: 'architecture';
 }
 
 /* '' */
 .icon-background:before {
-  content: '\e80e';
+  content: 'build';
 }
 
 /* '' */
 .icon-file:before {
-  content: '\e80f';
+  content: 'design_services';
 }
 
 /* '' */
