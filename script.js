@@ -349,7 +349,7 @@ const treeSequence = new ScrollSequence({
   container: '.tree-sequence',
   scrollWith: '.tree-container',
   images: treeSequenceImages,
-  imagesRoot: 'https://websitedesignassets.s3.us-east-2.amazonaws.com/imgSeq/',
+  imagesRoot: 'images2/',
   priorityFrames: [0, 20, 40, 60, 90],
   cover: true,
   starts: 'out',
