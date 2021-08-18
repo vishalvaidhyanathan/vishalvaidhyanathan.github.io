@@ -1,6 +1,12 @@
 .scroll-container {
   height: 100vh;
   background: #3d3d3d;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
 }
 
 .speak {
@@ -17,7 +23,14 @@
 
 .scroll-sequence__content {
   padding: 4em;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
+
+.scroll-sequence__content::-webkit-scrollbar {
+  display: none;
+}
+
 
 .scroll-sequence {
   position: sticky;
@@ -31,13 +44,21 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
   
 }
+
+.scroll-sequence::-webkit-scrollbar {
+  display: none;
+}
+
 
 h1 {
   font-size: 3em;
   width: 60wv;
   margin-bottom: 10px;
+  text-align: center;
 }
 @media screen and (max-width: 600px) {
   h1 {
@@ -51,11 +72,19 @@ h1 {
   font-family: "Open Sans", sans-serif;
   color: white;
   text-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+  text-align: center;
 }
 
 body {
   margin: 0;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 
 * {
   box-sizing: border-box;
